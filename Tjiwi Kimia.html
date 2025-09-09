@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT Pabrik Kertas Tjiwi Kimia Tbk</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=location_on"
+    />
+    <style>
+      * {
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      .main-header {
+        top: 0px;
+        position: sticky;
+      }
+
+      header {
+        z-index: 5;
+      }
+      #red-bar {
+        display: none;
+      }
+      #white-bar {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        header {
+          display: block;
+        }
+        #red-bar {
+          display: block;
+          display: flex;
+          justify-content: flex-end;
+        }
+        #white-bar {
+          display: block;
+        }
+      }
+
+      .full-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .max-container {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      .informasi-saham {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .product-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        height: 400px;
+      }
+
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+      }
+
+      @media (min-width: 768px) {
+        .max-container {
+          flex-direction: row;
+          width: 1300px;
+          gap: 20px;
+        }
+        .product-container {
+          margin: 0px;
+          width: 380px;
+          height: 380px;
+        }
+        .card img {
+          width: 450px;
+          align-self: center;
+        }
+      }
+      .main-header-feature {
+        color: white;
+        font-size: 11px;
+        cursor: pointer;
+        margin-right: 45px;
+        font-weight: 800;
+      }
+      .main-header-feature:hover {
+        background-color: transparent;
+      }
+      .navigation-bar-option {
+        margin: 20px;
+        color: black;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .navigation-bar-footer {
+        color: black;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .navigation-bar-option:active {
+        text-decoration: 3px underline red;
+        text-underline-offset: 3px;
+      }
+      .video-background iframe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .vertical-line {
+        border-left: 10px solid red;
+        height: 50px;
+      }
+      .main-style-button {
+        border: 2px solid #f42534;
+        background-color: #ffffff;
+        color: #f42534;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 12px;
+        cursor: pointer;
+      }
+      .main-style-button:hover {
+        background-color: #f42534;
+        color: #ffffff;
+      }
+      .transparent-button {
+        color: white;
+        background-color: transparent;
+        border-color: white;
+        border: 2px solid white;
+        padding: 12px;
+        cursor: pointer;
+      }
+      .transparent-button:hover {
+        background-color: rgb(247, 235, 235);
+      }
+      .read-more-button {
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        cursor: pointer;
+      }
+      .card {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+      }
+      .card img {
+        width: 560px;
+      }
+      .card h4 {
+        bottom: 16px;
+        left: 16px;
+        font-size: 20px;
+        color: white;
+        position: absolute;
+      }
+      .card img {
+        transition-property: transform;
+        transition-duration: 1000ms;
+        transition-timing-function: ease-in-out;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card:hover img {
+        transform: scale(1.25);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <div
+        id="red-bar"
+        class="full-container"
+        style="background-color: #f42534; margin: 0px; padding: 0px"
+      >
+        <div
+          class="max-container"
+          style="justify-content: flex-end; padding: 6px 0px"
+        >
+          <h5 class="main-header-feature">JARINGAN GLOBAL</h5>
+          <h5 class="main-header-feature">HUBUNGI KAMI</h5>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#FFFFFF"
+            >
+              <path
+                d="M480.21-480Q510-480 531-501.21t21-51Q552-582 530.79-603t-51-21Q450-624 429-602.79t-21 51Q408-522 429.21-501t51 21ZM480-191q119-107 179.5-197T720-549q0-105-68.5-174T480-792q-103 0-171.5 69T240-549q0 71 60.5 161T480-191Zm0 95Q323.03-227.11 245.51-339.55 168-452 168-549q0-134 89-224.5T479.5-864q133.5 0 223 90.5T792-549q0 97-77 209T480-96Zm0-456Z"
+              />
+            </svg>
+            <h5 class="main-header-feature" style="margin: 0px">
+              LANGUAGE |
+              <span style="cursor: pointer">
+                <select
+                  class="main-header-feature"
+                  name="language"
+                  style="background-color: #f42534; border: none"
+                >
+                  <option value="ID">INDONESIA</option>
+                  <option value="EN">ENGLISH</option>
+                </select></span
+              >
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="full-container"
+        style="background-color: #ffffff; margin: 0px"
+      >
+        <div
+          class="max-container"
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+          "
+        >
+          <img
+            src="https://tse2.mm.bing.net/th/id/OIP.0QHlIR_vj4CzU3hKdBrKSAHaBt?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+            style="width: 200px; cursor: pointer"
+          />
+          <div style="display: flex; flex-direction: row">
+            <h4 id="white-bar" class="navigation-bar-option">Beranda</h4>
+            <h4 id="white-bar" class="navigation-bar-option">Tentang Kami</h4>
+            <h4 id="white-bar" class="navigation-bar-option">Sustainability</h4>
+            <select
+              id="white-bar"
+              class="navigation-bar-option"
+              style="background-color: none; border: none; font-weight: 600"
+            >
+              <option>Produk Kami</option>
+            </select>
+            <select
+              id="white-bar"
+              class="navigation-bar-option"
+              style="background-color: none; border: none; font-weight: 600"
+            >
+              <option>#LifeAtTjiwi</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--This is Video container-->
+    <div class="video-background" id="top">
+      <iframe
+        width="100%"
+        height="500"
+        controls="0"
+        modestbranding="1"
+        rel="0"
+        src="https://www.youtube.com/embed/thdtYTUUMvo?autoplay=1&mute=1&rel=0&showinfo=0&modestbranding=1&playsinline=1&controls=0&color=white&playlist=thdtYTUUMvo&loop=1&enablejsapi=1&origin=https%3A%2F%2Ftjiwikimia.co.id&widgetid=2&forigin=https%3A%2F%2Ftjiwikimia.co.id%2Fin%2Fhome&aoriginsup=1&gporigin=https%3A%2F%2Ftjiwikimia.co.id%2Fin%2Fabout-us&vf=2"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+    <!--This is Video container-->
+    <div class="full-container">
+      <div class="max-container">
+        <div class="content-container">
+          <span class="vertical-line"
+            ><h2 style="margin-left: 5px">Tentang Tjiwi Kimia</h2></span
+          >
+          <p>
+            PT Pabrik Kertas Tjiwi Kimia Tbk. (TKIM) berlokasi di Sidoarjo,
+            dekat Surabaya di Jawa Timur - Indonesia. Pabrik mulai berproduksi
+            pada tahun 1978. Pada tahun 2006, kapasitas produksi kertas dan
+            karton meningkat menjadi lebih dari 1,394,000 metrik ton per tahun
+            dan kapasitas konversi alat tulis bertambah menjadi sekitar 320.000
+            metrik ton per tahun.
+          </p>
+          <button class="main-style-button">Baca Lebih Lengkap</button>
+        </div>
+        <img
+          src="https://i.ibb.co.com/r2pBzfX2/about-us-tjiwi-kimia.jpg"
+          style="margin-top: 20px; width: 560px"
+        />
+      </div>
+    </div>
+    <div
+      class="full-container"
+      style="
+        margin: 20px 0px;
+        background-image: url(https://i.ibb.co.com/Cs8qrvp7/BG.jpg);
+        margin-right: 30px;
+      "
+    >
+      <div class="max-container" style="align-items: flex-start; gap: 20px">
+        <div class="informasi-saham">
+          <span class="vertical-line">
+            <h2 style="margin-left: 5px">Informasi Saham</h2></span
+          >
+          <p>
+            APP telah melantai di Bursa Efek Jakarta selama hampir 30 tahun.
+            Kami berterima kasih atas kepercayaan dan dukungan dari para
+            pemegang saham, dan kami akan terus memberikan usaha terbaik untuk
+            mereka. Seiring langkah kami menuju masa depan yang lebih baik, kami
+            berharap bisa tumbuh bersama Anda.
+          </p>
+          <p style="font-weight: 600">Informasi lebih lanjut kunjungi:</p>
+          <div style="display: flex; flex-direction: row">
+            <h5 style="color: #f42534">APP Group</h5>
+            <h5 style="color: #f42534; margin-left: 20px">Yahoo Finance</h5>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            border: 1px solid white;
+            background-color: white;
+            padding: 20px;
+            width: 600px;
+          "
+        >
+          <p>()</p>
+          <p>(%)</p>
+          <p>Last updated:</p>
+          <p>Source:</p>
+        </div>
+      </div>
+    </div>
+    <div class="full-container">
+      <div class="max-container" style="flex-direction: column">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-self: flex-start;
+          "
+        >
+          <span class="vertical-line"
+            ><h2 style="margin-left: 5px">Produk Kami</h2></span
+          >
+        </div>
+
+        <div
+          class="max-container"
+          id="produk-kami"
+          style="align-items: stretch"
+        >
+          <div
+            class="product-container"
+            style="
+              background-image: url(https://i.ibb.co.com/pjZ6BY5r/Paperplus-paper-only.png);
+              background-size: contain;
+              background-position: center;
+            "
+          >
+            <img
+              src="https://i.ibb.co.com/Xf9d5Fxm/paperplus-text-only-removebg-preview.png"
+              style="width: 200px"
+            />
+          </div>
+          <div class="product-container" style="background-color: #7baf43">
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 20px;
+              "
+            >
+              <div>
+                <img
+                  src="https://app.co.id/documents/20123/37290/asia-pulp-paper-Logo-Sinarline.png/0302075e-43eb-6a36-d8c1-9e7d7fc37c0b?t=1576319115293"
+                  style="width: 200px"
+                />
+                <p style="color: white">
+                  Berbagai produk premium untuk pasar kedua: Timur Tengah dan
+                  Afrika
+                </p>
+              </div>
+              <div>
+                <img
+                  src="https://app.co.id/documents/20123/37290/asia-pulp-paper-Logo-Paperline-Stationery.png/a3240efa-cc60-9a12-14d8-d1b9308b3791?t=1576319115972"
+                  style="width: 200px"
+                />
+                <p style="color: white">
+                  Merek global APP untuk barang-barang Alat Tulis dan Kantor
+                  premium
+                </p>
+              </div>
+            </div>
+            <button class="read-more-button">Read More</button>
+          </div>
+          <div class="product-container" style="background-color: #fcb529">
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 20px;
+              "
+            >
+              <div>
+                <img
+                  src="https://i.ibb.co.com/Jj3B2dj8/Enlivo-logo-removebg-preview.png"
+                  style="width: 200px"
+                />
+                <p style="color: white">
+                  Desain merek yang menyenangkan, hidup, cerah, dan modern
+                </p>
+              </div>
+            </div>
+            <button class="read-more-button">Read More</button>
+          </div>
+        </div>
+        <div class="max-container">
+          <button class="main-style-button" style="width: 100%">
+            ⌕ Browse Our Products
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="full-container">
+      <div class="max-container">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://i.ibb.co.com/21zWLzqS/Green-BG.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              justify-content: space-between;
+              padding: 20px;
+            "
+          >
+            <h2 style="margin-left: 5px; color: white">
+              APP Sinar Mas Sustainability
+            </h2>
+            <h3 style="color: white; font-size: 30px">
+              Tumbuhkan Esok Bersama
+            </h3>
+            <p style="color: white">
+              Visi kami untuk memproduksi pulp dan paper yang efisien dan
+              inovatif melalui praktik kehutanan yang bertanggungjawab.
+            </p>
+            <button class="transparent-button">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="full-container" style="z-index: 1">
+      <div class="max-container" id="mission">
+        <div class="card">
+          <img src="https://i.ibb.co.com/9ms24dV9/CSR.jpg" />
+          <h4>CSR</h4>
+        </div>
+        <div class="card">
+          <img src="https://i.ibb.co.com/KxVnsjPr/People.jpg" />
+          <h4>People</h4>
+        </div>
+        <div class="card">
+          <img
+            src="https://i.ibb.co.com/x8cS7Skh/Penelitian-dan-pengembangan.jpg"
+          />
+          <h4>Penelitian-dan-pengembangan</h4>
+        </div>
+      </div>
+    </div>
+    <div class="full-container">
+      <div class="max-container" style="flex-direction: column">
+        <button
+          style="
+            background-color: #f42534;
+            border: none;
+            align-self: flex-end;
+            cursor: pointer;
+          "
+        >
+          <a href="#top">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="48px"
+              viewBox="0 -960 960 960"
+              width="48px"
+              fill="#FFFFFF"
+            >
+              <path
+                d="M452-244v-400L282-477l-42-43 241-241 241 241-42 42-168-168v402h-60Z"
+              />
+            </svg>
+          </a>
+        </button>
+      </div>
+    </div>
+    <footer class="full-container" style="background-color: #e9e9e9">
+      <div class="max-container">
+        <div
+          id="footer-content"
+          style="display: flex; gap: 20px; flex-direction: column"
+        >
+          <h5>A company of</h5>
+          <img
+            src="https://images.seeklogo.com/logo-png/39/2/asia-pulp-paper-logo-png_seeklogo-397062.png"
+            style="width: 150px"
+          />
+          <div style="display: flex; flex-direction: row">
+            <h4 class="navigation-bar-footer">Beranda</h4>
+            <h4 class="navigation-bar-footer" style="margin-left: 20px">
+              Tentang Kami
+            </h4>
+            <h4 class="navigation-bar-footer" style="margin-left: 20px">
+              Sustainability
+            </h4>
+            <h4 class="navigation-bar-footer" style="margin-left: 20px">
+              Produk Kami
+            </h4>
+            <h4 class="navigation-bar-footer" style="margin-left: 20px">
+              #LifeAtTjiwi
+            </h4>
+          </div>
+          <h3 style="font-size: 25px">Tjiwi Kimia Paper Mills</h3>
+          <h5>Alamat</h5>
+          <p>
+            Jalan Raya Surabaya - Mojokerto km 44, Desa Kramat Temenggung,
+            Kecamatan Tarik, Sidoarjo, East Java, Indonesia 61265
+          </p>
+          <div style="display: flex; flex-direction: column">
+            <h4>Kontak</h4>
+            <p>(+62)32 1361552</p>
+            <p>(+62)32 1361615</p>
+          </div>
+          <div style="display: flex; flex-direction: column">
+            <h4>Media Sosial</h4>
+            <p>@asiapulppaper</p>
+            <p>asiapulppaper</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
